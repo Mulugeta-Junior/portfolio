@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-* {
+  body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-}
-a, button {
+} 
+
+ a, button {
   text-decoration: none;
 }
 .hero {
@@ -89,7 +90,7 @@ nav ul li a:hover:after {
     #7644ff 50.19%,
     #fd4766 79.69%
   );
-  -webkit-background-clip: text;
+ -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .content h1 {
@@ -108,4 +109,8 @@ nav ul li a:hover:after {
   color: #202020;
   margin-top: 25px;
   margin-bottom: 30px;
-}
+}  
+
+
+
+
