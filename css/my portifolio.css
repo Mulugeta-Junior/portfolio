@@ -26,12 +26,6 @@ body {
 }
 
 /* Portfolio grid */
-/* .portfolio-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; Space between items
-   justify-content: space-between; 
-}  */
 
 .portfolio-container {
     display: grid;
@@ -40,16 +34,18 @@ body {
 }
 
 .portfolio-item {
-  flex: 0 0 calc(50% - 20px); /* Each item takes up 50% of the row */
-  box-sizing: border-box;
+  display: flex;
+   justify-content: center;
+  /* flex: 0 0 calc(50% - 20px);  Each item takes up 50% of the row */
+ /* box-sizing: border-box; */
 }
 
 .portfolio-wrap {
   position: relative;
   overflow: hidden;
   border: 1px solid #ddd; /* Optional border */
-  /* height: 300px; Fixed height for consistency */
-   width: 100%; /*Fills allocated space */
+   width: auto; /*Fills allocated space */
+   height: auto;
   border-radius: 8px; /* Rounded corners */
   transition: transform 0.3s ease;
 }
@@ -59,13 +55,11 @@ body {
 }
 
 .portfolio-wrap img {
-  max-height: 300px;
+  max-width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto;
-  /* width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px 8px 0 0; Rounds only the top corners  */
+ 
 }
 
 .portfolio-info {
