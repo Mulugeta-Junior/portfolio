@@ -1,15 +1,17 @@
-
+/* General body styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
+/* Container for the portfolio section */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* Section Title */
 .section-title {
   text-align: center;
   margin-bottom: 30px;
@@ -25,43 +27,46 @@ body {
   color: #666;
 }
 
-/* Portfolio grid */
+/* Portfolio Container - Grid layout for the portfolio items */
+ .portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* Two items per row */
+  grid-gap: 20px; /* Gap between items */
+} 
 
-.portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between items */
-}
-
+/* Portfolio Item styles */
 .portfolio-item {
   display: flex;
-   justify-content: center;
-  /* flex: 0 0 calc(50% - 20px);  Each item takes up 50% of the row */
- /* box-sizing: border-box; */
+  justify-content: center;
+  flex: 0 0 100%; /* Full width for each item in its grid cell */
+  box-sizing: border-box;
 }
 
+/* Portfolio Wrap */
 .portfolio-wrap {
   position: relative;
   overflow: hidden;
   border: 1px solid #ddd; /* Optional border */
-   width: auto; /*Fills allocated space */
-   height: auto;
+  width: 100%;
+  height: auto;
   border-radius: 8px; /* Rounded corners */
   transition: transform 0.3s ease;
 }
 
+/* Hover effect for portfolio items */
 .portfolio-wrap:hover {
   transform: scale(1.02); /* Slight zoom effect on hover */
 }
 
+/* Image inside portfolio wrap */
 .portfolio-wrap img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
- 
 }
 
+/* Portfolio Info section */
 .portfolio-info {
   position: absolute;
   bottom: 0;
@@ -74,8 +79,25 @@ body {
   transition: opacity 0.3s ease-in-out;
   border-radius: 0 0 8px 8px; /* Rounds only the bottom corners */
   height: auto;
-}
+} 
 
+/* Show portfolio info on hover */
 .portfolio-wrap:hover .portfolio-info {
   opacity: 1; /* Show on hover */
 }
+
+/* Styles for deployed link icons */
+.deployed-link img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  /* Adjust for small screens, making the portfolio items stack vertically */
+  .portfolio-container {
+    grid-template-columns: 1fr; /* One item per row */
+  }
+}
+
